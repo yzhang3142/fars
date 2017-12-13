@@ -13,7 +13,7 @@
 #'
 #' @return A tibble object containing the data from the specified input file.
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' fars_read("accident_2013.csv.bz2")
 #' }
@@ -35,13 +35,15 @@ fars_read <- function(filename) {
 #'
 #' @return A string representing the coresponding file name.
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' make_filename(2013)
 #' }
 make_filename <- function(year) {
         year <- as.integer(year)
-        sprintf("../data/accident_%d.csv.bz2", year)
+        system.file("data",
+                    sprintf("../data/accident_%d.csv.bz2", year),
+                    package = "rpkgtutorial")
 }
 
 #' Read data from multiple csv files
@@ -58,7 +60,7 @@ make_filename <- function(year) {
 #' @return A list of tibble objects. Each object contains the data from
 #'     the corresponding file of that year.
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' fars_read_years(2013)
 #' fars_read_years(c(2013, 2014, 2015))
@@ -90,7 +92,7 @@ fars_read_years <- function(years) {
 #'
 #' @return A tibble of monthly accident counts.
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' fars_summarize_years(2013)
 #' fars_summarize_years(c(2013, 2014, 2015))
@@ -122,7 +124,7 @@ fars_summarize_years <- function(years) {
 #'
 #' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' fars_map_state(4, 2013)
 #' }
