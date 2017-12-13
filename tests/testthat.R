@@ -1,13 +1,13 @@
 library(testthat)
-library(rpkgtutorial)
+library(fars)
 
-test_check("rpkgtutorial")
+test_check("fars")
 
 # Test the internal function - make_filename
 expect_that(make_filename(2013), matches("accident_2013.csv.bz2"))
 
 # Test the internal function - fars_read
-expect_that(fars_read("accident_2013.csv.bz2"), is_a("tbl"))
+expect_that(fars_read(make_filename(2013)), is_a("tbl"))
 
 # Test the internal function - fars_read_years
 expect_that(fars_read_years(c(2013, 2014)), is_a("list"))

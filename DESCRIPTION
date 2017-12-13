@@ -1,4 +1,4 @@
-Package: rpkgtutorial
+Package: fars
 Type: Package
 Title: Building R Package Practice
 Version: 0.1.0
