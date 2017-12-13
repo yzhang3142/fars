@@ -3,6 +3,11 @@
 fars
 ====
 
+![Travis Badge](https://travis-ci.org/yzhang3142/fars.svg?branch=master)
+
+Overview
+--------
+
 This package is created as part of the assessment for the course Building R Packages on Coursera.
 
 Installation
@@ -26,8 +31,8 @@ fars_summarize_years(c(2013, 2014))
 fars_map_state(4, 2013)
 ```
 
-This assessment is evaluated based on the following questions:
---------------------------------------------------------------
+Evaluations
+-----------
 
 -   Does this package contain the correct R file(s) under the R/ directory?
 -   Does this package contain a man/ directory with corresponding documentation files?
@@ -37,8 +42,3 @@ This assessment is evaluated based on the following questions:
 -   Does the README.md file for this directory have a Travis badge?
 -   Is the build of this package passing on Travis?
 -   Are the build logs for this package on Travis free of any errors, warnings, or notes?
-
-Travis CI Passing Badge
------------------------
-
-Build status: ![Travis Badge](https://travis-ci.org/yzhang3142/fars.svg?branch=master)
