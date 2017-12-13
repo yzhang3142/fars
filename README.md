@@ -21,7 +21,9 @@ Example
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-## basic example code
+fars_summarize_years(c(2013, 2014))
+
+fars_map_state(4, 2013)
 ```
 
 This assessment is evaluated based on the following questions:
