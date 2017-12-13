@@ -3,7 +3,7 @@
 rpkgtutorial
 ============
 
-The goal of creating rpkgtutorial is to learn and practice with
+This package is created as part of the assessment for the course Building R Packages on Coursera.
 
 Installation
 ------------
