@@ -6,7 +6,7 @@
 #' @note This function will throw an error when the file is not found.
 #'
 #' @importFrom readr read_csv
-#' @importFrom dplyr tbl_df
+#' @import dplyr
 #'
 #' @param filename A string specifing the file name.
 #'
@@ -52,8 +52,6 @@ make_filename <- function(year) {
 #' file is unavailable. In the latter case, a warning message will be printed
 #' to the console.
 #'
-#' @importFrom dplyr mutate select %>%
-#'
 #' @param years A numeric vector specifying a selection of years in 4-digit numbers.
 #'
 #' @return A list of tibble objects. Each object contains the data from
@@ -85,7 +83,6 @@ fars_read_years <- function(years) {
 #' returned tibble represents the month index, whereas other columns represent
 #' the monthly accident counts in certain years.
 #'
-#' @importFrom dplyr bind_rows group_by summarize %>%
 #' @importFrom tidyr spread
 #'
 #' @param years A numeric vector of four-digit numbers representing years.
@@ -117,7 +114,6 @@ fars_summarize_years <- function(years) {
 #'
 #' @importFrom maps map
 #' @importFrom graphics points
-#' @importFrom dplyr filter
 #'
 #' @param state.num An integer that represents a state
 #' @param year An integer of 4 digits that represents a year
