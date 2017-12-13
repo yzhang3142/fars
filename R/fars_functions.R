@@ -86,8 +86,6 @@ fars_read_years <- function(years) {
 #' returned tibble represents the month index, whereas other columns represent
 #' the monthly accident counts in certain years.
 #'
-#' @importFrom tidyr spread
-#'
 #' @param years A numeric vector of four-digit numbers representing years.
 #'
 #' @return A tibble of monthly accident counts.
@@ -115,7 +113,6 @@ fars_summarize_years <- function(years) {
 #' @note This function will throw an error when the input \code{state.num} value
 #' is not valid.
 #'
-#' @importFrom dplyr filter
 #' @importFrom maps map
 #' @importFrom graphics points
 #'
