@@ -76,7 +76,7 @@ fars_read_years <- function(years) {
         })
 }
 
-#' Count the number of accidents happend in each month and year
+#' Count number of accidents happend in each month and year
 #'
 #' This function imports and combines data from multiple files and counts the
 #' number of accidents happend in each month and year. The first column of the

@@ -1,58 +1,33 @@
 ---
-title: "rpkgtutorial Overview"
+title: "Introduction to rpkgtutorial"
 author: "Yang Zhang"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Introduction to rpkgtutorial}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-Vignettes are long form documentation commonly included in packages. Because they are part of the distribution of the package, they need to be as compact as possible. The `html_vignette` output type provides a custom style sheet (and tweaks some options) to ensure that the resulting html is as small as possible. The `html_vignette` format:
+This package provides two helper functions that provide summary and visualization on certain type of data files. 
 
-- Never uses retina figures
-- Has a smaller default figure size
-- Uses a custom CSS stylesheet instead of the default Twitter Bootstrap style
+* Internval functions
+    * `fars_read(filename)` - Read data from a csv file
+    * `make_filename()` - Generate a file name in a specific convension
+    * `fars_read_years()` - Read data from multiple csv files
+* External functions:
+    * `fars_summarize_years()` - Count number of accidents happend in each month and year
+    * `fars_map_state()` - Plot the locations of accidents happend in a given state and year
+    
+## Data Files
 
-## Vignette Info
+In order to execute the functions properly, data files need to be placed in the current working directory with a naming convension of `accident_yyyy.csv.bz2`, where `yyyy` indicates a year. Sample data files can be found in the pacakge's `extdata` folder.
 
-Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
+## Example
+```{r eval = FALSE}
+# Get specific columns from each data file
+fars_summarize_years(c(2013, 2014, 2015))
 
-## Styles
-
-The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
-
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
-
-## Figures
-
-The figure sizes have been customised so that you can easily put two images side-by-side. 
-
-```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
+# Plot a map to show the location of accidents recorded in the data file
+fars_map_state(4, 2013)
 ```
-
-You can enable figure captions by `fig_caption: yes` in YAML:
-
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
-
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
-```
-
-Also a quote using `>`:
-
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))

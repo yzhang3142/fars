@@ -2,7 +2,7 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_summarize_years}
 \alias{fars_summarize_years}
-\title{Count the number of accidents happend in each month and year}
+\title{Count number of accidents happend in each month and year}
 \usage{
 fars_summarize_years(years)
 }
