@@ -51,5 +51,5 @@ of the package and how it should be used?
 warnings, or notes?
 
 ## Travis CI Passing Badge
-Successfully built on Travis:
-![alt text](https://travis-ci.org/yzhang3142/rpkgtutorial.svg?branch=master)
+Build status:
+![Travis Badge](https://travis-ci.org/yzhang3142/fars.svg?branch=master)

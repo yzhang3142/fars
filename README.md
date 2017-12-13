@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-rpkgtutorial
-============
+fars
+====
 
 This package is created as part of the assessment for the course Building R Packages on Coursera.
 
@@ -12,7 +12,7 @@ You can install rpkgtutorial from github with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("yzhang3142/rpkgtutorial")
+devtools::install_github("yzhang3142/fars")
 ```
 
 Example
@@ -41,4 +41,4 @@ This assessment is evaluated based on the following questions:
 Travis CI Passing Badge
 -----------------------
 
-Successfully built on Travis: ![alt text](https://travis-ci.org/yzhang3142/rpkgtutorial.svg?branch=master)
+Build status: ![Travis Badge](https://travis-ci.org/yzhang3142/fars.svg?branch=master)
